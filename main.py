@@ -43,7 +43,7 @@ def createdir(dir):
 if __name__=="__main__":
     dstPath = "D:\\life\\Photo"#相册归档目录
     dstPathTemp = "D:\\life\\Photo\\temp"#无法获取照片或视频时间的归档目录
-    processPath = "G:\\Life\\Photo"#准备归档的目录，支持递归查找
+    processPath = 'C:\\Users\\jinhan\\Desktop\\photo'  #准备归档的目录，支持递归查找
 
     # dstPath = "D:\\life\\test"
     # processPath = "D:\\life\\大"
