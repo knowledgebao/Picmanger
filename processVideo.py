@@ -3,7 +3,8 @@ import subprocess
 import traceback
 import tempfile
 
-FFPROBE = "D:\\code\\Picmanger\\ffprobe"
+#FFPROBE = "D:\\code\\Picmanger\\ffprobe"
+FFPROBE = "D:\\GoPath\\src\\github.com\\knowledgebao\\Picmanger\\ffprobe"
 
 #获取cmd的执行结果
 def getcmdresult(cmd):
@@ -27,7 +28,7 @@ def getcmdresult(cmd):
 #失败: 空
 def GetVideoTime(fileabspath):
     # cmd = 'ffprobe D:\\life\\Photo\\photo\\100APPLE\\AFJX7823.MP4'  # 可以直接在命令行中执行的命令
-    cmd = FFPROBE+' '+fileabspath  # 可以直接在命令行中执行的命令
+    cmd = FFPROBE+' '+"\"" + fileabspath+"\""  # 可以直接在命令行中执行的命令
     # p, f = os.path.split(fileabspath)
     cmdRet = getcmdresult(cmd)
     time = ''
@@ -43,7 +44,7 @@ def GetVideoTime(fileabspath):
     return time
 
 if __name__ == "__main__":
-    time = GetVideoTime("D:\\life\\Photo\\2019\\01\\20190115_142556_UOQW2161.MP4")
+    time = GetVideoTime("C:\\Users\\guoxingbao\\Desktop\\twh2019-12-22 171814\\102APPLE\\IMG_2995.MOV")
     #time = GetVideoTime("C:\\Users\\jinhan\\Desktop\\photo\\DCIM\\103APPLE\\GRLE0703.MP4")
 
     print(time)
